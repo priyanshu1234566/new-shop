@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "../styles/components css/categorycard.css";
 import { FiArrowRight } from "react-icons/fi";
 
 function CategoryCard({

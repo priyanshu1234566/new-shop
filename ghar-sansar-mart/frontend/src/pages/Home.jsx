@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "../styles/home.css";
+import "../styles/pages css/home.css";
 import {
   FiArrowRight,
   FiShoppingCart,

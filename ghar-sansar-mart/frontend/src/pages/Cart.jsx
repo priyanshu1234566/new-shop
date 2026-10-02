@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import "../styles/cart.css";
+import "../styles/pages css/cart.css";
 import {
   FiShoppingCart,
   FiTrash2,

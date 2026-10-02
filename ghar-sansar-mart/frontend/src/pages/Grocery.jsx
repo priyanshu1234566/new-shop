@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import "../styles/pages css/grocery.css";
 import { Link } from "react-router-dom";
 import {
   FiFilter,

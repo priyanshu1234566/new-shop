@@ -1,0 +1,561 @@
+/* =========================================================
+   GHAR SANSAR MART
+   CATEGORY CARD
+========================================================= */
+
+.category-card {
+  position: relative;
+
+  min-height: 250px;
+
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  padding: 26px;
+
+  border: 1px solid rgba(226, 232, 240, 0.9);
+
+  border-radius: 22px;
+
+  background: #ffffff;
+
+  color: #172033;
+
+  text-decoration: none;
+
+  overflow: hidden;
+
+  isolation: isolate;
+
+  box-shadow:
+    0 8px 25px rgba(15, 23, 42, 0.06);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.category-card:hover {
+  transform: translateY(-7px);
+
+  border-color: rgba(20, 184, 166, 0.3);
+
+  box-shadow:
+    0 20px 45px rgba(15, 23, 42, 0.12);
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.category-card-content {
+  position: relative;
+
+  z-index: 3;
+
+  width: 55%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  min-width: 0;
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.category-icon {
+  width: 48px;
+  height: 48px;
+
+  display: grid;
+  place-items: center;
+
+  margin-bottom: 16px;
+
+  border-radius: 14px;
+
+  background: rgba(20, 184, 166, 0.1);
+
+  color: #0f766e;
+
+  font-size: 22px;
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease;
+}
+
+
+.category-card:hover .category-icon {
+  transform: rotate(-5deg) scale(1.08);
+
+  background: rgba(20, 184, 166, 0.16);
+}
+
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+.category-text {
+  min-width: 0;
+}
+
+
+.category-label {
+  display: inline-block;
+
+  margin-bottom: 7px;
+
+  color: #0f766e;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+}
+
+
+.category-text h3 {
+  max-width: 260px;
+
+  margin: 0;
+
+  color: #172033;
+
+  font-size: 22px;
+
+  font-weight: 850;
+
+  line-height: 1.2;
+
+  letter-spacing: -0.5px;
+}
+
+
+.category-text p {
+  max-width: 260px;
+
+  margin: 9px 0 16px;
+
+  color: #64748b;
+
+  font-size: 11px;
+
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   SHOP NOW
+========================================================= */
+
+.category-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color: #0f766e;
+
+  font-size: 11px;
+
+  font-weight: 800;
+}
+
+
+.category-link svg {
+  font-size: 15px;
+
+  transition:
+    transform 0.25s ease;
+}
+
+
+.category-card:hover .category-link svg {
+  transform: translateX(5px);
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.category-card-image {
+  position: absolute;
+
+  z-index: 2;
+
+  right: 0;
+  bottom: 0;
+
+  width: 48%;
+  height: 100%;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: center;
+
+  pointer-events: none;
+}
+
+
+.category-card-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  object-position: center bottom;
+
+  transform:
+    translateX(8px)
+    scale(0.94);
+
+  filter:
+    drop-shadow(
+      0 15px 18px rgba(15, 23, 42, 0.12)
+    );
+
+  transition:
+    transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1),
+    filter 0.45s ease;
+}
+
+
+.category-card:hover .category-card-image img {
+  transform:
+    translateX(0)
+    scale(1.04);
+
+  filter:
+    drop-shadow(
+      0 20px 25px rgba(15, 23, 42, 0.17)
+    );
+}
+
+
+/* =========================================================
+   DECORATIVE CIRCLE
+========================================================= */
+
+.category-decoration {
+  position: absolute;
+
+  z-index: 1;
+
+  right: -55px;
+  bottom: -65px;
+
+  width: 210px;
+  height: 210px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(20, 184, 166, 0.08);
+
+  transition:
+    transform 0.45s ease,
+    background 0.45s ease;
+}
+
+
+.category-card:hover .category-decoration {
+  transform: scale(1.15);
+
+  background:
+    rgba(20, 184, 166, 0.13);
+}
+
+
+/* =========================================================
+   COLOR VARIANTS
+========================================================= */
+
+/* BLUE */
+
+.category-blue .category-icon {
+  background: #eff6ff;
+
+  color: #2563eb;
+}
+
+.category-blue .category-label,
+.category-blue .category-link {
+  color: #2563eb;
+}
+
+.category-blue .category-decoration {
+  background: rgba(37, 99, 235, 0.08);
+}
+
+.category-blue:hover {
+  border-color: rgba(37, 99, 235, 0.25);
+}
+
+
+/* GREEN */
+
+.category-green .category-icon {
+  background: #ecfdf5;
+
+  color: #059669;
+}
+
+.category-green .category-label,
+.category-green .category-link {
+  color: #059669;
+}
+
+.category-green .category-decoration {
+  background: rgba(5, 150, 105, 0.08);
+}
+
+.category-green:hover {
+  border-color: rgba(5, 150, 105, 0.25);
+}
+
+
+/* ORANGE */
+
+.category-orange .category-icon {
+  background: #fff7ed;
+
+  color: #ea580c;
+}
+
+.category-orange .category-label,
+.category-orange .category-link {
+  color: #ea580c;
+}
+
+.category-orange .category-decoration {
+  background: rgba(234, 88, 12, 0.08);
+}
+
+.category-orange:hover {
+  border-color: rgba(234, 88, 12, 0.25);
+}
+
+
+/* PURPLE */
+
+.category-purple .category-icon {
+  background: #faf5ff;
+
+  color: #9333ea;
+}
+
+.category-purple .category-label,
+.category-purple .category-link {
+  color: #9333ea;
+}
+
+.category-purple .category-decoration {
+  background: rgba(147, 51, 234, 0.08);
+}
+
+.category-purple:hover {
+  border-color: rgba(147, 51, 234, 0.25);
+}
+
+
+/* RED */
+
+.category-red .category-icon {
+  background: #fef2f2;
+
+  color: #dc2626;
+}
+
+.category-red .category-label,
+.category-red .category-link {
+  color: #dc2626;
+}
+
+.category-red .category-decoration {
+  background: rgba(220, 38, 38, 0.08);
+}
+
+.category-red:hover {
+  border-color: rgba(220, 38, 38, 0.25);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .category-card {
+    min-height: 230px;
+
+    padding: 22px;
+  }
+
+  .category-text h3 {
+    font-size: 20px;
+  }
+
+  .category-text p {
+    font-size: 10px;
+  }
+
+  .category-icon {
+    width: 44px;
+    height: 44px;
+
+    margin-bottom: 13px;
+  }
+
+  .category-card-image {
+    width: 48%;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .category-card {
+    min-height: 205px;
+
+    padding: 20px;
+
+    border-radius: 17px;
+  }
+
+  .category-card-content {
+    width: 58%;
+  }
+
+  .category-icon {
+    width: 40px;
+    height: 40px;
+
+    margin-bottom: 11px;
+
+    border-radius: 11px;
+
+    font-size: 18px;
+  }
+
+  .category-label {
+    font-size: 8px;
+
+    letter-spacing: 1.2px;
+  }
+
+  .category-text h3 {
+    max-width: 180px;
+
+    font-size: 18px;
+  }
+
+  .category-text p {
+    max-width: 180px;
+
+    margin: 7px 0 12px;
+
+    font-size: 9px;
+
+    line-height: 1.5;
+  }
+
+  .category-link {
+    font-size: 10px;
+  }
+
+  .category-card-image {
+    width: 48%;
+  }
+
+  .category-card-image img {
+    transform:
+      translateX(5px)
+      scale(0.95);
+  }
+
+  .category-decoration {
+    width: 160px;
+    height: 160px;
+
+    right: -55px;
+    bottom: -55px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .category-card {
+    min-height: 185px;
+
+    padding: 17px;
+  }
+
+  .category-card-content {
+    width: 60%;
+  }
+
+  .category-text h3 {
+    font-size: 16px;
+  }
+
+  .category-text p {
+    display: none;
+  }
+
+  .category-icon {
+    width: 36px;
+    height: 36px;
+
+    margin-bottom: 9px;
+  }
+
+  .category-card-image {
+    width: 44%;
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+.category-card:focus-visible {
+  outline: 3px solid rgba(20, 184, 166, 0.35);
+
+  outline-offset: 3px;
+}
