@@ -4,6 +4,7 @@ import {
   useEffect,
   useState,
 } from "react";
+import "../styles/context css/cartcontext.css";
 
 const CartContext = createContext(null);
 
@@ -119,33 +120,29 @@ export function CartProvider({ children }) {
     );
   };
 
-  const updateQuantity = (
-    productId,
-    quantity
-  ) => {
-    const qty = Number(quantity);
+  const updateQuantity = (productId, quantity) => {
+  const qty = Math.floor(Number(quantity));
 
-    if (!Number.isFinite(qty)) {
-      return;
-    }
+  if (!Number.isFinite(qty)) {
+    return;
+  }
 
-    if (qty <= 0) {
-      removeFromCart(productId);
-      return;
-    }
+  if (qty <= 0) {
+    removeFromCart(productId);
+    return;
+  }
 
-    setCartItems((currentItems) =>
-      currentItems.map((item) =>
-        item.id === productId
-          ? {
-              ...item,
-              quantity: Math.floor(qty),
-            }
-          : item
-      )
-    );
-  };
-
+  setCartItems((currentItems) =>
+    currentItems.map((item) =>
+      item.id === productId
+        ? {
+            ...item,
+            quantity: qty,
+          }
+        : item
+    )
+  );
+};
   const clearCart = () => {
     setCartItems([]);
   };

@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import "../styles/pages css/homekitchen.css";
 
 import { Link } from "react-router-dom";
 import {
