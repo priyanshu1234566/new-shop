@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-
+import "../styles/pages css/wish.css";
 import {
   FiHeart,
   FiTrash2,
