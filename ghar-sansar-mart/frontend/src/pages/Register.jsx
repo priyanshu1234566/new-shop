@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "../styles/pages css/register.css";
 import { Link, useNavigate } from "react-router-dom";
 import {
   FiUser,

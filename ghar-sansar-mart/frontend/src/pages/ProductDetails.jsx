@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "../styles/pages css/projectdetails.css";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import {
   FiArrowLeft,

@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import "../styles/pages css/searchresults.css";
 import { Link, useSearchParams } from "react-router-dom";
 import {
   FiSearch,
